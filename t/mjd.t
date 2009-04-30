@@ -2,14 +2,19 @@ use Test::More tests => 9;
 
 BEGIN { use_ok "Time::GPS", qw(gps_instant_to_mjd gps_mjd_to_instant); }
 
-use Math::BigRat;
+use Math::BigRat 0.04;
+
+sub match($$) {
+	my($a, $b) = @_;
+	ok ref($a) eq ref($b) && $a == $b;
+}
 
 sub check($$) {
 	my($instant, $mjd) = @_;
 	$instant = Math::BigRat->new($instant);
 	$mjd = Math::BigRat->new($mjd);
-	is gps_instant_to_mjd($instant), $mjd;
-	is gps_mjd_to_instant($mjd), $instant;
+	match gps_instant_to_mjd($instant), $mjd;
+	match gps_mjd_to_instant($mjd), $instant;
 }
 
 check("19", "36204");

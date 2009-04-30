@@ -1,11 +1,35 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Time-GPS
-version:      0.000
-version_from: lib/Time/GPS.pm
-installdirs:  site
+---
+name: Time-GPS
+version: 0.001
+author:
+  - 'Andrew Main (Zefram) <zefram@fysh.org>'
+abstract: Global Positioning System time
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
 requires:
-    Math::BigRat:                  0.03
-
+  Carp: 0
+  Exporter: 0
+  Math::BigRat: 0.03
+  constant: 0
+  parent: 0
+  perl: 5.006
+  strict: 0
+  warnings: 0
+build_requires:
+  Math::BigRat: 0.04
+  Module::Build: 0
+  Test::More: 0
+  perl: 5.006
+  strict: 0
+  warnings: 0
+dynamic_config: 0
+provides:
+  Time::GPS:
+    file: lib/Time/GPS.pm
+    version: 0.001
+generated_by: Module::Build version 0.31012
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
 distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30
