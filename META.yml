@@ -1,12 +1,31 @@
 ---
-name: Time-GPS
-version: 0.001
+abstract: 'Global Positioning System time'
 author:
   - 'Andrew Main (Zefram) <zefram@fysh.org>'
-abstract: Global Positioning System time
+build_requires:
+  Math::BigRat: 0.04
+  Module::Build: 0
+  Test::More: 0
+  perl: 5.006
+  strict: 0
+  warnings: 0
+configure_requires:
+  Module::Build: 0
+  perl: 5.006
+  strict: 0
+  warnings: 0
+distribution_type: module
+dynamic_config: 0
+generated_by: 'Module::Build version 0.3607'
 license: perl
-resources:
-  license: http://dev.perl.org/licenses/
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Time-GPS
+provides:
+  Time::GPS:
+    file: lib/Time/GPS.pm
+    version: 0.002
 requires:
   Carp: 0
   Exporter: 0
@@ -16,20 +35,6 @@ requires:
   perl: 5.006
   strict: 0
   warnings: 0
-build_requires:
-  Math::BigRat: 0.04
-  Module::Build: 0
-  Test::More: 0
-  perl: 5.006
-  strict: 0
-  warnings: 0
-dynamic_config: 0
-provides:
-  Time::GPS:
-    file: lib/Time/GPS.pm
-    version: 0.001
-generated_by: Module::Build version 0.31012
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
-distribution_type: module
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.002

@@ -47,13 +47,14 @@ not match the similar day-based notations used for TAI and TT.
 
 package Time::GPS;
 
+{ use 5.006; }
 use warnings;
 use strict;
 
 use Carp qw(croak);
 use Math::BigRat 0.03;
 
-our $VERSION = "0.001";
+our $VERSION = "0.002";
 
 use parent "Exporter";
 our @EXPORT_OK = qw(gps_instant_to_mjd gps_mjd_to_instant gps_realisation);
@@ -129,7 +130,7 @@ Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2006, 2009 Andrew Main (Zefram) <zefram@fysh.org>
+Copyright (C) 2006, 2009, 2010 Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 LICENSE
 
