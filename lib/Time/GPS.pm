@@ -54,7 +54,7 @@ use strict;
 use Carp qw(croak);
 use Math::BigRat 0.03;
 
-our $VERSION = "0.002";
+our $VERSION = "0.003";
 
 use parent "Exporter";
 our @EXPORT_OK = qw(gps_instant_to_mjd gps_mjd_to_instant gps_realisation);
@@ -130,7 +130,8 @@ Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2006, 2009, 2010 Andrew Main (Zefram) <zefram@fysh.org>
+Copyright (C) 2006, 2009, 2010, 2012
+Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 LICENSE
 

@@ -1,3 +1,14 @@
+version 0.003; 2012-03-22
+
+  * in test suite, require bugfixed version of Math::BigRat (for
+    construction from decimal fraction strings)
+
+  * include META.json in distribution
+
+  * convert .cvsignore to .gitignore
+
+  * add MYMETA.json to .cvsignore
+
 version 0.002; 2010-10-23
 
   * check for required Perl version at runtime

@@ -5,7 +5,7 @@ use Test::More tests => 9;
 
 BEGIN { use_ok "Time::GPS", qw(gps_instant_to_mjd gps_mjd_to_instant); }
 
-use Math::BigRat 0.04;
+use Math::BigRat 0.13;
 
 sub match($$) {
 	my($a, $b) = @_;
